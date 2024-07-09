@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Calculator</title>
+</head>
+<body class="flex">
+    <div class="calculator-container">
+    <form>
+        <div class="screen">
+            <input type="text" name="screen" id="screen" maxlength="10">
+        </div>
+        <div class="buttons-container">
+            <input type="button" value="AC" onclick="screen.value = ''" class="operator btn">
+            <input type="button" value="DE" onclick="screen.value = screen.value.toString().slice(0,-1)" class="operator">
+            <input type="button" value="." onclick="screen.value += '.'" class="operator btn">
+            <input type="button" value="/" onclick="screen.value += '/'" class="operator btn">
+        </div>
+        <div class="buttons-container">
+            <input type="button" value="7" onclick="if (screen.value.length < 12) screen.value += '7'" class="btn">
+            <input type="button" value="8" onclick="if (screen.value.length < 12) screen.value += '8'" class="btn">
+            <input type="button" value="9" onclick="if (screen.value.length < 12) screen.value += '9'" class="btn">
+            <input type="button" value="*" onclick="if (screen.value.length < 12) screen.value += '*'" class="operator btn">
+        </div>
+        <div class="buttons-container">
+            <input type="button" value="4" onclick="if (screen.value.length < 12) screen.value += '4'" class="btn">
+            <input type="button" value="5" onclick="if (screen.value.length < 12) screen.value += '5'" class="btn">
+            <input type="button" value="6" onclick="if (screen.value.length < 12) screen.value += '6'" class="btn">
+            <input type="button" value="-" onclick="if (screen.value.length < 12) screen.value += '-'" class="operator btn">
+        </div>
+        <div class="buttons-container">
+            <input type="button" value="1" onclick="if (screen.value.length < 12) screen.value += '1'" class="btn">
+            <input type="button" value="2" onclick="if (screen.value.length < 12) screen.value += '2'" class="btn">
+            <input type="button" value="3" onclick="if (screen.value.length < 12) screen.value += '3'" class="btn">
+            <input type="button" value="+" onclick="if (screen.value.length < 12) screen.value += '+'" class="operator btn">
+        </div>
+        <div class="buttons-container">
+            <input type="button" value="00" onclick="if (screen.value.length < 12) screen.value += '00'" class="btn">
+            <input type="button" value="0" onclick="if (screen.value.length < 12) screen.value += '0'" class="btn">
+            <input type="button" value="=" class="equal operator btn" onclick="screen.value = eval(screen.value)">
+        </div>
+    </form>
+    </div>
+</body>
+</html>
